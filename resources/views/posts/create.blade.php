@@ -25,7 +25,6 @@
         性別
          <p class="col-sm-4 col-form-label"></p>
                 <div class="col-sm-8">
-                    <label>{{ Form::radio('gender', "") }}</label>
                     <label>{{ Form::radio('gender', "男性") }}男性</label>
                     <label>{{ Form::radio('gender', "女性") }}女性</label>
             @error('gender')
