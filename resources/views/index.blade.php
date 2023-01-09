@@ -6,7 +6,7 @@
     <p> <span>LaravelBoard-Tutorial</span></p>
         <a href="{{ route('posts.create') }}">[登録へ]</a>
     </h1>
-
+#テーブル開始
     <table border="1">
     <tr>
     <td>NO</td>
