@@ -12,3 +12,4 @@ $search_params = $request->only([
 Post.phpの22行目から
 public function scopeSearch($query) 
 でCSVの機能を実装しております。
+以上
