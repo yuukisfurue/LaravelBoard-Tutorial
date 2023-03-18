@@ -12,10 +12,14 @@
     <td>NO</td>
     <td>氏名</td>
     <td>性別</td>
-    <td>都道府県</td>
+    <td>出身地</td>
+    <td>住所</td>
     <td>職種</td>
     <td>部署</td>
-    <td>役職</td>
+    <td>チーム名</td>
+    <td>現年収</td>
+    <td>前年収</td>
+    <td>雇用形態</td>
   </tr>   
   </table>
 
@@ -26,8 +30,12 @@
     <th>{{ $post->name }}</th>
     <th>{{ $post->gender }}</th>
     <th>{{ $post->prefecture }}</th>
+    <th>{{ $post->stay }}</th>
     <th>{{ $post->company }}</th>
     <th>{{ $post->jyob }}</th>
+    <th>{{ $post->affiliation }}</th>
+    <th>{{ $post->annual }}</th>
+    <th>{{ $post->lastyear }}</th>
     <th>{{ $post->employmentstatus }}</th>
   </tr>
     </table>

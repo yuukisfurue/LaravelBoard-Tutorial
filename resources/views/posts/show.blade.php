@@ -11,8 +11,12 @@
     <th>{{ $post->name }}</th>
     <th>{{ $post->gender }}</th>
     <th>{{ $post->prefecture }}</th>
+    <th>{{ $post->stay }}</th>
     <th>{{ $post->company }}</th>
     <th>{{ $post->jyob }}</th>
+    <th>{{ $post->affiliation }}</th>
+    <th>{{ $post->annual }}</th>
+    <th>{{ $post->lastyear }}</th>
     <th>{{ $post->employmentstatus }}</th>
    
     <h2><a href="{{ route('posts.edit', $post) }}">[編集]</h2></a>
