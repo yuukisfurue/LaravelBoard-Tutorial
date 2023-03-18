@@ -3,7 +3,7 @@
     </x-slot>
 
     <h1>
-    <p> <span>LaravelBoard-Tutorial</span></p>
+    <p> <span>年収査定会議</span></p>
         <a href="{{ route('posts.create') }}">[登録へ]</a>
     </h1>
 #テーブル開始
@@ -17,6 +17,7 @@
     <td>職種</td>
     <td>部署</td>
     <td>チーム名</td>
+    <td>ポジション</td>
     <td>現年収</td>
     <td>前年収</td>
     <td>雇用形態</td>
@@ -34,6 +35,7 @@
     <th>{{ $post->company }}</th>
     <th>{{ $post->jyob }}</th>
     <th>{{ $post->affiliation }}</th>
+    <th>{{ $post->pojishon }}</th>
     <th>{{ $post->annual }}</th>
     <th>{{ $post->lastyear }}</th>
     <th>{{ $post->employmentstatus }}</th>

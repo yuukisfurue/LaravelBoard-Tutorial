@@ -18,6 +18,7 @@ class PostController extends Controller
             'company',
             'jyob',
             'affiliation',
+            'pojishon',
             'annual',
             'lastyear',
             'employmentstatus'
@@ -49,6 +50,7 @@ class PostController extends Controller
             'company',
             'jyob',
             'affiliation',
+            'pojishon',
             'annual',
             'lastyear',
             'employmentstatus'
@@ -68,6 +70,7 @@ class PostController extends Controller
                     $post->company,
                     $post->jyob,
                     $post->affiliation,
+                    $post->pojishon,
                     $post->annual,
                     $post->lastyear,
                     $post->employmentstatus
@@ -113,6 +116,7 @@ class PostController extends Controller
             'company' => 'required|min:1',
             'jyob' => 'required|min:1',
             'affiliation' => 'required|min:1',
+            'pojishon' => 'required|min:1',
             'annual' => 'required|min:1',
             'lastyear' => 'required|min:1',
             'employmentstatus' => 'required|min:1',            
@@ -126,6 +130,7 @@ class PostController extends Controller
             'company.required' => '職種は必須です',
             'jyob.required' => '部署は必須です',
             'affiliation.required' => 'チーム名は必須です',
+            'pojishon.required' => 'ポジションは必須です',
             'annual' => '現年収は必須です',
             'lastyear' => '前年収は必須です',
             'employmentstatus.required' => '役職は必須です',
@@ -139,6 +144,7 @@ class PostController extends Controller
         $post->company = $request->company;
         $post->jyob = $request->jyob;
         $post->affiliation = $request->affiliation;
+        $post->pojishon = $request->pojishon;
         $post->annual = $request->annual;
         $post->lastyear = $request->lastyear;
         $post->employmentstatus = $request->employmentstatus;
@@ -163,6 +169,7 @@ class PostController extends Controller
         $post->company = $request->company;
         $post->jyob = $request->jyob;
         $post->affiliation = $request->affiliation;
+        $post->pojishon = $request->pojishon;
         $post->annual = $request->annual;
         $post->lastyear = $request->lastyear;
         $post->employmentstatus = $request->employmentstatus;

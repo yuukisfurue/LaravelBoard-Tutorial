@@ -18,6 +18,7 @@ class Post extends Model
         'company',
         'jyob',
         'affiliation',
+        'pojishon',
         'annual',
         'lastyear',
         'employmentstatus',
@@ -46,6 +47,9 @@ class Post extends Model
     })
     ->when($request->affiliation, function($q, $affiliation) {
         $q->where('affiliation', 'LIKE', '%' . $affiliation . '%');
+    })
+    ->when($request->pojishon, function($q, $pojishon) {
+        $q->where('pojishon', 'LIKE', '%' . $pojishon . '%');
     })
     ->when($request->annual, function($q, $annual) {
         $q->where('annual', 'LIKE', '%' . $annual . '%');

@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->string('company');
             $table->string('jyob');
             $table->string('affiliation');
+            $table->string('pojishon');
             $table->string('annual');
             $table->string('lastyear');
             $table->string('employmentstatus');

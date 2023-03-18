@@ -15,6 +15,7 @@
     <th>{{ $post->company }}</th>
     <th>{{ $post->jyob }}</th>
     <th>{{ $post->affiliation }}</th>
+    <th>{{ $post->pojishon }}</th>
     <th>{{ $post->annual }}</th>
     <th>{{ $post->lastyear }}</th>
     <th>{{ $post->employmentstatus }}</th>

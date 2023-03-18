@@ -88,6 +88,17 @@
            @enderror 
          </div>
          <div class="form-group">
+         <tr><th>ポジション</th><td>
+        <select type="text" class="form-control" name="pojishon">                 
+        @foreach(config('pojishon') as $key => $score)
+        <option value="{{ $score }}">{{ $score }}</option>
+        @endforeach
+        </select>
+           @error('jyob')
+           <div class="error">{{ $message }}</div>
+           @enderror 
+         </div>
+         <div class="form-group">
          <tr><th>現年収</th><td>
         <select type="text" class="form-control" name="annual">                 
         @foreach(config('annual') as $key => $score)
