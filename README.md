@@ -12,4 +12,6 @@ $search_params = $request->only([
 Post.phpの22行目から
 public function scopeSearch($query) 
 でCSVの機能を実装しております。
-以上
+
+詳細は以下のURLよりご確認お願いします。
+https://github.com/yuukisfurue/LaravelBoard-Tutorial/issues/1
