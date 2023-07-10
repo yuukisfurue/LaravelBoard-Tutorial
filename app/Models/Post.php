@@ -11,33 +11,38 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name',
-        'gender',
         'prefecture',
-        'stay',
+        'gender',
+        'employmentstatus',
         'company',
         'jyob',
+        'stay',
         'affiliation',
-        'pojishon',
+        'postion',
         'annual',
         'lastyear',
-        'employmentstatus',
     ];
     
     public function scopeSearch($query) {
     $request = request();
-    
-    $query->when($request->name, function($q, $name) {
-        $q->where('name', 'LIKE', '%' . $name . '%');
+
+    $query->when($request->id, function($q, $id) {
+        $q->where('id', 'LIKE', '%' . $id . '%');
     })
-    ->when($request->gender, function($q, $gender) {
-        $q->where('gender', 'LIKE', '%' . $gender . '%');
+
+    ->when($request->name, function($q, $name) {
+        $q->where('name', 'LIKE', '%' . $name . '%');
     })
     ->when($request->prefecture, function($q, $prefecture) {
         $q->where('prefecture', 'LIKE', '%' . $prefecture . '%');
     })
-    ->when($request->stay, function($q, $stay) {
-        $q->where('stay', 'LIKE', '%' . $stay . '%');
+    ->when($request->gender, function($q, $gender) {
+        $q->where('gender', 'LIKE', '%' . $gender . '%');
+    })
+    ->when($request->employmentstatus, function($q, $employmentstatus) {
+        $q->where('employmentstatus', 'LIKE', '%' . $employmentstatus . '%');
     })
     ->when($request->company, function($q, $company) {
         $q->where('company', 'LIKE', '%' . $company . '%');
@@ -45,20 +50,20 @@ class Post extends Model
     ->when($request->jyob, function($q, $jyob) {
         $q->where('jyob', 'LIKE', '%' . $jyob . '%');
     })
-    ->when($request->affiliation, function($q, $affiliation) {
+    ->when($request->stay, function($q, $stay) {
+        $q->where('stay', 'LIKE', '%' . $stay . '%');
+    })
+     ->when($request->affiliation, function($q, $affiliation) {
         $q->where('affiliation', 'LIKE', '%' . $affiliation . '%');
     })
-    ->when($request->pojishon, function($q, $pojishon) {
-        $q->where('pojishon', 'LIKE', '%' . $pojishon . '%');
+    ->when($request->postion, function($q, $postion) {
+        $q->where('postion', 'LIKE', '%' . $postion . '%');
     })
     ->when($request->annual, function($q, $annual) {
         $q->where('annual', 'LIKE', '%' . $annual . '%');
     })
     ->when($request->lastyear, function($q, $lastyear) {
         $q->where('lastyear', 'LIKE', '%' . $lastyear . '%');
-    })
-    ->when($request->employmentstatus, function($q, $employmentstatus) {
-        $q->where('employmentstatus', 'LIKE', '%' . $employmentstatus . '%');
     });
   }
 }

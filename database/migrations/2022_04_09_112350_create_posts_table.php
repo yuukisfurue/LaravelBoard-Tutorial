@@ -16,16 +16,16 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('gender');
             $table->string('prefecture');
-            $table->string('stay');
+            $table->string('gender');
+            $table->string('employmentstatus');
             $table->string('company');
             $table->string('jyob');
+            $table->string('stay');
             $table->string('affiliation');
-            $table->string('pojishon');
+            $table->string('postion');
             $table->string('annual');
             $table->string('lastyear');
-            $table->string('employmentstatus');
             $table->timestamps(); // created_at, updated_at
         });
     }

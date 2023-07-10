@@ -14,6 +14,10 @@ use App\Http\Controllers\PostController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -24,8 +28,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
-Route::get('/', [PostController::class, 'index'])
+Route::get('/posts/index', [PostController::class, 'index'])
     ->name('posts.index');
 
 Route::get('/posts/{post}', [PostController::class, 'show'])

@@ -25,16 +25,16 @@ class PostRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3',
-            'gender' => 'required|min:1',
             'prefecture' => 'required|min:1',
-            'stay' => 'required|min:1',
+            'gender' => 'required|min:1',
+            'employmentstatus' => 'required|min:1',
             'company' => 'required|min:1',
             'jyob' => 'required|min:1',
+            'stay' => 'required|min:1',
             'affiliation' => 'required|min:1',
-            'pojishon' => 'required|min:1',
+            'postion' => 'required|min:1',
             'annual' => 'required|min:1',
             'lastyear' => 'required|min:1',
-            'employmentstatus' => 'required|min:1',
         ];
     }
 
@@ -43,15 +43,15 @@ class PostRequest extends FormRequest
         return [
             'name.required' => '氏名は必須です',
             'name.min' => ':min 文字以上入力してください',
-            'gender.required' => '性別は必須です',
             'prefecture.required' => '出身地は必須です',
+            'gender.required' => '性別は必須です',
+            'employmentstatus.required' => '雇用形態は必須です',
             'stay.required' => '現住所は必須です',
             'jyob.required' => '所属は必須です',
             'affiliation' => 'チーム名は必須です',
-            'pojishon' => 'ポジションは必須です',
+            'postion' => 'ポジションは必須です',
             'annual' => '現年収は必須です',
             'lastyear' => '前年収は必須です',
-            'employmentstatus.required' => '雇用形態は必須です',
         ];
     }
 }
